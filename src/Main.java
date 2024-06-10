@@ -5,9 +5,9 @@ public class Main {
 
     }
 
-    public class RectangleCalculator {
+    public static class RectangleCalculator {
         // Funktion zur Berechnung des Flächeninhalts eines Rechtecks
-        public static double calculateArea(double length, double width) {
+        public static double calculateArea(double length) {
 
             return length;
         }
@@ -28,25 +28,13 @@ public class Main {
             double length = scanner.nextDouble();
             System.out.print("Geben Sie die Breite des Rechtecks ein: ");
             double width = scanner.nextDouble();
-            double area = calculateArea(length, width);
+            double area = calculateArea(length);
             double perimeter = calculatePerimeter(length, width);
             double doubleArea = calculateDoubleArea(length, width);
             System.out.println("Flächeninhalt: " + area);
             System.out.println("Umfang: " + perimeter);
             System.out.println("Doppelte Fläche: " + doubleArea);
             scanner.close();
-        }
-
-        public class RectangleCalculatorA {
-            public static double calculateArea(double length, double width) {
-                return length * width;
-            }
-            public static double calculatePerimeter(double length, double width) {
-                return 2 * (length + width);
-            }
-            public static double calculateDoubleArea(double length, double width) {
-                return 2 * (length * width);
-            }
         }
 
     }
