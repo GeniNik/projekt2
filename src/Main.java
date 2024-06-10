@@ -1,3 +1,38 @@
+public class Main {
+    // Function to calculate the area of a kite using its diagonals
+    public static double kiteAreaDiagonals(double d1, double d2) {
+        return (d1 * d2) / 2;
+    }
+
+    // Function to calculate the area of a kite using its sides and the angle between them
+    public static double kiteAreaSidesAngle(double a, double b, double angleDegrees) {
+        double angleRadians = Math.toRadians(angleDegrees);
+        return a * b * Math.sin(angleRadians);
+    }
+
+    // Function to calculate the perimeter of a kite
+    public static double kitePerimeter(double a, double b) {
+        return 2 * (a + b);
+    }
+
+    public static void main(String[] args) {
+        // Examples for the usage of the kite functions
+        double d1 = 5;
+        double d2 = 6;
+        double areaDiagonals = kiteAreaDiagonals(d1, d2);
+        System.out.println("Flächeninhalt des Drachenvierecks (Diagonalen): " + areaDiagonals + " Einheiten²");
+
+        double a = 4;
+        double b = 3;
+        double angleDegrees = 60;
+        double areaSidesAngle = kiteAreaSidesAngle(a, b, angleDegrees);
+        System.out.println("Flächeninhalt des Drachenvierecks (Seiten und Winkel): " + areaSidesAngle + " Einheiten²");
+
+        double perimeter = kitePerimeter(a, b);
+        System.out.println("Umfang des Drachenvierecks: " + perimeter + " Einheiten");
+    }
+}
+
 class SquareCalculations {
     // Function to calculate the perimeter of a square
     public static double calculatePerimeter(double sideLength) {
@@ -9,7 +44,6 @@ class SquareCalculations {
         return sideLength * sideLength;
     }
 
-    // Main function to demonstrate the usage of the above functions
     public static void main(String[] args) {
         // Example side length of the square
         double sideLength = 5.0;
@@ -24,10 +58,5 @@ class SquareCalculations {
         System.out.println("Side length: " + sideLength);
         System.out.println("Perimeter of the square: " + perimeter);
         System.out.println("Area of the square: " + area);
-        System.out.println("The calculatePerimeter and calculateArea functions are defined as methods of the SquareCalculations class.\n" +
-                "In the main method, the sideLength is set to 5.0 (this can be any value you want to test).\n" +
-                "The calculatePerimeter function is called with sideLength as an argument to get the perimeter of the square.\n" +
-                "The calculateArea function is called with sideLength as an argument to get the area of the square.\n" +
-                "The results are printed to the console.");
     }
 }
