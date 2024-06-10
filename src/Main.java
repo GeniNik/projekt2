@@ -1,4 +1,5 @@
 public class Main {
+
     // Function to calculate the area of a kite using its diagonals
     public static double kiteAreaDiagonals(double d1, double d2) {
         return (d1 * d2) / 2;
@@ -15,27 +16,29 @@ public class Main {
         return 2 * (a + b);
     }
 
+    // Function to calculate the area of a circle
     public static double flaecheninhaltKreis(double radius) {
         return Math.PI * Math.pow(radius, 2);
     }
 
+    // Function to calculate the circumference of a circle
     public static double umfangKreis(double radius) {
         return 2 * Math.PI * radius;
     }
 
+    // Function to calculate the diameter of a circle
     public static double durchmesserKreis(double radius) {
         return 2 * radius;
     }
 
     public static void main(String[] args) {
-        // Examples for the usage of the kite functions
+        // Circle calculations
         double radius = 5.0;
-
         System.out.println("Flächeninhalt des Kreises: " + flaecheninhaltKreis(radius));
         System.out.println("Umfang des Kreises: " + umfangKreis(radius));
         System.out.println("Durchmesser des Kreises: " + durchmesserKreis(radius));
 
-        // Beispiele für die Nutzung der Funktionen
+        // Kite calculations
         double d1 = 5;
         double d2 = 6;
         double areaDiagonals = kiteAreaDiagonals(d1, d2);
