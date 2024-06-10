@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     // Function to calculate the area of a kite using its diagonals
@@ -50,42 +52,43 @@ public class Main {
         double areaSidesAngle = kiteAreaSidesAngle(a, b, angleDegrees);
         System.out.println("Flächeninhalt des Drachenvierecks (Seiten und Winkel): " + areaSidesAngle + " Einheiten²");
 
+        // Rectangle calculations
+        RectangleCalculator.main(args);
+
+        // Square calculations
+        SquareCalculations.main(args);
+    }
+}
+
+class RectangleCalculator {
+    // Function to calculate the area of a rectangle
+    public static double calculateArea(double length, double width) {
+        return length * width;
     }
 
-    public static class RectangleCalculator {
-        // Funktion zur Berechnung des Flächeninhalts eines Rechtecks
-        public static double calculateArea(double length) {
+    // Function to calculate the perimeter of a rectangle
+    public static double calculatePerimeter(double length, double width) {
+        return 2 * (length + width);
+    }
 
-            return length;
-        }
-        // Funktion zur Berechnung des Umfangs eines Rechtecks
-        public static double calculatePerimeter(double length, double width) {
+    // Function to calculate the double area of a rectangle
+    public static double calculateDoubleArea(double length, double width) {
+        return 2 * calculateArea(length, width);
+    }
 
-            return 2 * (length + width);
-        }
-        // Funktion zur Berechnung der doppelten Fläche eines Rechtecks
-        public static double calculateDoubleArea(double length, double width) {
-
-            return 2 * (length * width);
-        }
-        // Beispiel zur Verwendung der Funktionen
-        public static void main(String[] args) {
-            java.util.Scanner scanner = new java.util.Scanner(System.in);
-            System.out.print("Geben Sie die Länge des Rechtecks ein: ");
-            double length = scanner.nextDouble();
-            System.out.print("Geben Sie die Breite des Rechtecks ein: ");
-            double width = scanner.nextDouble();
-            double area = calculateArea(length);
-            double perimeter = calculatePerimeter(length, width);
-            double doubleArea = calculateDoubleArea(length, width);
-            System.out.println("Flächeninhalt: " + area);
-            System.out.println("Umfang: " + perimeter);
-            System.out.println("Doppelte Fläche: " + doubleArea);
-            scanner.close();
-        }
-
-        double perimeter = kitePerimeter(a, b);
-        System.out.println("Umfang des Drachenvierecks: " + perimeter + " Einheiten");
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Geben Sie die Länge des Rechtecks ein: ");
+        double length = scanner.nextDouble();
+        System.out.print("Geben Sie die Breite des Rechtecks ein: ");
+        double width = scanner.nextDouble();
+        double area = calculateArea(length, width);
+        double perimeter = calculatePerimeter(length, width);
+        double doubleArea = calculateDoubleArea(length, width);
+        System.out.println("Flächeninhalt: " + area);
+        System.out.println("Umfang: " + perimeter);
+        System.out.println("Doppelte Fläche: " + doubleArea);
+        scanner.close();
     }
 }
 
@@ -95,7 +98,7 @@ class SquareCalculations {
         return 4 * sideLength;
     }
 
-    // Function to calculate the surface (area) of a square
+    // Function to calculate the area of a square
     public static double calculateArea(double sideLength) {
         return sideLength * sideLength;
     }
