@@ -1,5 +1,3 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     // Function to calculate the area of a kite using its diagonals
     public static double kiteAreaDiagonals(double d1, double d2) {
@@ -17,6 +15,18 @@ public class Main {
         return 2 * (a + b);
     }
 
+    public static double flaecheninhaltKreis(double radius) {
+        return Math.PI * Math.pow(radius, 2);
+    }
+
+    public static double umfangKreis(double radius) {
+        return 2 * Math.PI * radius;
+    }
+
+    public static double durchmesserKreis(double radius) {
+        return 2 * radius;
+    }
+
     public static void main(String[] args) {
         // Examples for the usage of the kite functions
         double radius = 5.0;
@@ -24,7 +34,7 @@ public class Main {
         System.out.println("Flächeninhalt des Kreises: " + flaecheninhaltKreis(radius));
         System.out.println("Umfang des Kreises: " + umfangKreis(radius));
         System.out.println("Durchmesser des Kreises: " + durchmesserKreis(radius));
-    }
+
         // Beispiele für die Nutzung der Funktionen
         double d1 = 5;
         double d2 = 6;
@@ -37,18 +47,8 @@ public class Main {
         double areaSidesAngle = kiteAreaSidesAngle(a, b, angleDegrees);
         System.out.println("Flächeninhalt des Drachenvierecks (Seiten und Winkel): " + areaSidesAngle + " Einheiten²");
 
-    public static double flaecheninhaltKreis(double radius) {
-        return Math.PI * Math.pow(radius, 2);
         double perimeter = kitePerimeter(a, b);
         System.out.println("Umfang des Drachenvierecks: " + perimeter + " Einheiten");
-    }
-
-    public static double umfangKreis(double radius) {
-        return 2 * Math.PI * radius;
-    }
-
-    public static double durchmesserKreis(double radius) {
-        return 2 * radius;
     }
 }
 
